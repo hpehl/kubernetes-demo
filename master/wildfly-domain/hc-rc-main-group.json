@@ -1,5 +1,5 @@
 {
-  "id": "hc-rc--main-group",
+  "id": "hc-rc-main-group",
   "kind": "ReplicationController",
   "apiVersion": "v1beta1",
   "desiredState": {

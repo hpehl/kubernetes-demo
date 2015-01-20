@@ -1,5 +1,5 @@
 {
-  "id": "hc-service-other-group",
+  "id": "web-other-group",
   "kind": "Service",
   "apiVersion": "v1beta1",
   "selector": {

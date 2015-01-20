@@ -1,5 +1,5 @@
 {
-  "id": "dc-service-9990",
+  "id": "hal",
   "kind": "Service",
   "apiVersion": "v1beta1",
   "selector": {
