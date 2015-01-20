@@ -5,6 +5,6 @@ for REPLICATION_CONTROLLER in hc-controller-other-group.json hc-controller-main-
         kubectl delete -f wildfly-domain/$REPLICATION_CONTROLLER
 done
 
-for SERVICE in hc-service-other-group.json hc-service-main-group.json dc-service.json; do
+for SERVICE in hc-service-other-group.json hc-service-main-group.json dc-service-9999.json dc-service-9990.json; do
         kubectl delete -f wildfly-domain/$SERVICE
 done
