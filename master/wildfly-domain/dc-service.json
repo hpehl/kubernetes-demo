@@ -3,9 +3,10 @@
   "kind": "Service",
   "apiVersion": "v1beta1",
   "selector": {
-    "controller-type": "domain"
+    "operation-mode": "dc"
   },
   "containerPort": 9999,
   "protocol": "TCP",
-  "port": 9999
+  "port": 9999,
+  "publicIPs": [ "54.93.75.187" ]
 }

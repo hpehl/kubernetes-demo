@@ -5,7 +5,7 @@
   "desiredState": {
     "replicas": 1,
     "replicaSelector": {
-      "controller-type": "domain"
+      "operation-mode": "dc"
     },
     "podTemplate": {
       "desiredState": {
@@ -17,12 +17,6 @@
             {
               "name": "domain-controller",
               "image": "hpehl/wildfly-domain",
-              "ports": [
-                {
-                  "containerPort": 9990,
-                  "hostPort": 9990
-                }
-              ],
               "command": [
                 "--host-config",
                 "host-master.xml",
@@ -36,7 +30,7 @@
         }
       },
       "labels": {
-        "controller-type": "domain"
+        "operation-mode": "dc"
       }
     }
   }

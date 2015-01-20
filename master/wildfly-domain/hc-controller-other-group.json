@@ -1,12 +1,12 @@
 {
-  "id": "host-controller-main-group",
+  "id": "host-controller-other-group",
   "kind": "ReplicationController",
   "apiVersion": "v1beta1",
   "desiredState": {
-    "replicas": 2,
+    "replicas": 1,
     "replicaSelector": {
-      "controller-type": "host",
-      "group": "main-server-group"
+      "operation-mode": "hc",
+      "group": "other-server-group"
     },
     "podTemplate": {
       "desiredState": {
@@ -18,11 +18,6 @@
             {
               "name": "host-controller",
               "image": "hpehl/wildfly-domain",
-              "ports": [
-                {
-                  "containerPort": 8080
-                }
-              ],
               "env": [
                 {
                   "name": "WILDFLY_MANAGEMENT_USER",
@@ -34,7 +29,7 @@
                 },
                 {
                   "name": "SERVER_GROUP",
-                  "value": "main-server-group"
+                  "value": "other-server-group"
                 }
               ],
               "command": [
@@ -50,8 +45,8 @@
         }
       },
       "labels": {
-        "controller-type": "host",
-        "group": "main-server-group"
+        "operation-mode": "hc",
+        "group": "other-server-group"
       }
     }
   }

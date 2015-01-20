@@ -1,13 +1,14 @@
 {
-  "id": "web-ports",
+  "id": "host-controller-other-group",
   "kind": "Service",
   "apiVersion": "v1beta1",
   "selector": {
-    "controller-type": "host",
+    "operation-mode": "hc",
     "group": "other-server-group"
   },
   "publicIPs": ["172.31.13.172"],
   "containerPort": 8080,
   "protocol": "TCP",
-  "port": 8082
+  "port": 8082,
+  "publicIPs": [ "54.93.75.187" ]
 }
