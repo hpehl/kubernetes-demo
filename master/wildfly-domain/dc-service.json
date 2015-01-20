@@ -1,0 +1,11 @@
+{
+  "id": "domain-controller",
+  "kind": "Service",
+  "apiVersion": "v1beta1",
+  "selector": {
+    "controller-type": "domain"
+  },
+  "containerPort": 9999,
+  "protocol": "TCP",
+  "port": 9999
+}

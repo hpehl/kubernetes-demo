@@ -8,10 +8,10 @@ KUBE_API_ADDRESS="--address=0.0.0.0"
 KUBE_API_PORT="--port=8080"
 
 # How the replication controller and scheduler find the apiserver
-KUBE_MASTER="--master=ec2-54-93-75-187.eu-central-1.compute.amazonaws.com:8080"
+KUBE_MASTER="--master=http://ec2-54-93-75-187.eu-central-1.compute.amazonaws.com:8080"
 
 # Comma separated list of minions
-KUBELET_ADDRESSES="--machines=rhelatomic-minion"
+KUBELET_ADDRESSES="--machines=ec2-54-93-56-102.eu-central-1.compute.amazonaws.com"
 
 # Port minions listen on
 KUBELET_PORT="--kubelet_port=10250"
