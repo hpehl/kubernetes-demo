@@ -1,12 +1,11 @@
 {
-  "id": "host-controller-other-group",
+  "id": "hc-service-other-group",
   "kind": "Service",
   "apiVersion": "v1beta1",
   "selector": {
     "operation-mode": "hc",
     "group": "other-server-group"
   },
-  "publicIPs": ["172.31.13.172"],
   "containerPort": 8080,
   "protocol": "TCP",
   "port": 8082,

@@ -1,5 +1,5 @@
 {
-  "id": "domain-controller-9990",
+  "id": "dc-service-9990",
   "kind": "Service",
   "apiVersion": "v1beta1",
   "selector": {

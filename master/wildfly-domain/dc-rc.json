@@ -1,5 +1,5 @@
 {
-  "id": "domain-controller",
+  "id": "domain-rc",
   "kind": "ReplicationController",
   "apiVersion": "v1beta1",
   "desiredState": {

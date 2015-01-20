@@ -1,12 +1,11 @@
 {
-  "id": "host-controller-main-group",
+  "id": "hc-rc-main-group",
   "kind": "Service",
   "apiVersion": "v1beta1",
   "selector": {
     "operation-mode": "hc",
     "group": "main-server-group"
   },
-  "publicIPs": ["172.31.13.172"],
   "containerPort": 8080,
   "protocol": "TCP",
   "port": 8081,

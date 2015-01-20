@@ -1,5 +1,5 @@
 {
-  "id": "host-controller-other-group",
+  "id": "hc-rc-other-group",
   "kind": "ReplicationController",
   "apiVersion": "v1beta1",
   "desiredState": {
@@ -12,11 +12,11 @@
       "desiredState": {
         "manifest": {
           "version": "v1beta1",
-          "id": "host-controller",
+          "id": "host-controller-other-group",
           "restartPolicy": "always",
           "containers": [
             {
-              "name": "host-controller",
+              "name": "host-controller-other-group",
               "image": "hpehl/wildfly-domain",
               "env": [
                 {
