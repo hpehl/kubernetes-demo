@@ -18,6 +18,12 @@
             {
               "name": "host-controller-other-group",
               "image": "hpehl/wildfly-domain",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "hostPort": 8080
+                }
+              ],
               "env": [
                 {
                   "name": "WILDFLY_MANAGEMENT_USER",
