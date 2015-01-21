@@ -8,5 +8,5 @@
   "containerPort": 9999,
   "protocol": "TCP",
   "port": 9999,
-  "publicIPs": [ "54.93.56.102" ]
+  "publicIPs": [ "54.93.41.0" ]
 }

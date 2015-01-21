@@ -9,5 +9,5 @@
   "containerPort": 8080,
   "protocol": "TCP",
   "port": 8081,
-  "publicIPs": [ "54.93.56.102" ]
+  "publicIPs": [ "54.93.41.0" ]
 }
