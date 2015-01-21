@@ -1,0 +1,47 @@
+{
+  "id": "domain-rc",
+  "kind": "ReplicationController",
+  "apiVersion": "v1beta1",
+  "desiredState": {
+    "replicas": 0,
+    "replicaSelector": {
+      "operation-mode": "dc"
+    },
+    "podTemplate": {
+      "desiredState": {
+        "manifest": {
+          "version": "v1beta1",
+          "id": "domain-controller",
+          "restartPolicy": "always",
+          "containers": [
+            {
+              "name": "domain-controller",
+              "image": "hpehl/wildfly-domain",
+              "ports": [
+                {
+                  "containerPort": 9990,
+                  "hostPort": 9990
+                },
+                {
+                  "containerPort": 9999,
+                  "hostPort": 9999
+                }
+              ],
+              "command": [
+                "--host-config",
+                "host-master.xml",
+                "-b",
+                "0.0.0.0",
+                "-bmanagement",
+                "0.0.0.0"
+              ]
+            }
+          ]
+        }
+      },
+      "labels": {
+        "operation-mode": "dc"
+      }
+    }
+  }
+}

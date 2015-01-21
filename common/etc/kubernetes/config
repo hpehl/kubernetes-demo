@@ -1,0 +1,13 @@
+###
+# kubernetes system config
+# Comma separated list of nodes in the etcd cluster
+KUBE_ETCD_SERVERS="--etcd_servers=http://ec2-54-93-75-187.eu-central-1.compute.amazonaws.com:4001"
+
+# logging to stderr means we get it in the systemd journal
+KUBE_LOGTOSTDERR="--logtostderr=true"
+
+# journal message level, 0 is debug
+KUBE_LOG_LEVEL="--v=0"
+
+# Should this cluster be allowed to run privleged docker containers
+KUBE_ALLOW_PRIV="--allow_privileged=false"

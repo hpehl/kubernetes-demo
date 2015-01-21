@@ -1,0 +1,12 @@
+{
+  "id": "hal",
+  "kind": "Service",
+  "apiVersion": "v1beta1",
+  "selector": {
+    "operation-mode": "dc"
+  },
+  "containerPort": 9990,
+  "protocol": "TCP",
+  "port": 9990,
+  "publicIPs": [ "54.93.41.0" ]
+}

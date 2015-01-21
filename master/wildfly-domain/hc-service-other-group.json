@@ -1,0 +1,13 @@
+{
+  "id": "web-other-group",
+  "kind": "Service",
+  "apiVersion": "v1beta1",
+  "selector": {
+    "operation-mode": "hc",
+    "group": "other-server-group"
+  },
+  "containerPort": 8080,
+  "protocol": "TCP",
+  "port": 8082,
+  "publicIPs": [ "54.93.41.0" ]
+}

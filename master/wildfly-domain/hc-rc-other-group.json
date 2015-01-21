@@ -1,0 +1,58 @@
+{
+  "id": "hc-rc-other-group",
+  "kind": "ReplicationController",
+  "apiVersion": "v1beta1",
+  "desiredState": {
+    "replicas": 0,
+    "replicaSelector": {
+      "operation-mode": "hc",
+      "group": "other-server-group"
+    },
+    "podTemplate": {
+      "desiredState": {
+        "manifest": {
+          "version": "v1beta1",
+          "id": "host-controller-other-group",
+          "restartPolicy": "always",
+          "containers": [
+            {
+              "name": "host-controller-other-group",
+              "image": "hpehl/wildfly-domain",
+              "ports": [
+                {
+                  "containerPort": 8080
+                }
+              ],
+              "env": [
+                {
+                  "name": "WILDFLY_MANAGEMENT_USER",
+                  "value": "admin"
+                },
+                {
+                  "name": "WILDFLY_MANAGEMENT_PASSWORD",
+                  "value": "admin"
+                },
+                {
+                  "name": "SERVER_GROUP",
+                  "value": "other-server-group"
+                }
+              ],
+              "command": [
+                "--host-config",
+                "host-slave.xml",
+                "-b",
+                "0.0.0.0",
+                "-bmanagement",
+                "0.0.0.0"
+              ]
+            }
+          ]
+        }
+      },
+      "labels": {
+        "operation-mode": "hc",
+        "group": "other-server-group"
+      }
+    }
+  }
+}
