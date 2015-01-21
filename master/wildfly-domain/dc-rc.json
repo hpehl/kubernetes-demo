@@ -19,12 +19,10 @@
               "image": "hpehl/wildfly-domain",
               "ports": [
                 {
-                  "containerPort": 9990,
-                  "hostPort": 9990
+                  "containerPort": 9990
                 },
                 {
-                  "containerPort": 9999,
-                  "hostPort": 9999
+                  "containerPort": 9999
                 }
               ],
               "command": [
